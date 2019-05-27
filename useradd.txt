@@ -1,0 +1,39 @@
+//Create a user/Key Generators ON VirtualBox
+sudo su  
+//useradd username
+ useradd ada
+//passwd username
+passwd ada
+//enter the password 2x
+//check if user is created accordingly 
+ cat /etc/pass
+//check to which group this user belongs to :
+ cat /etc/sudoers.d/
+ ll
+//add the newly created user to this group
+ usermod -aG vagrant ada
+su ada
+ pwd
+ cd /home/ada
+ ll -a 
+ mkdir  .ssh
+chmod 700 .ssh
+ cd  .ssh
+ll
+touch authorized_keys
+chmod 600 authorized_keys
+//Generate a ssh key pair for this user 
+ssh-keygen  -t  rsa
+less ada.pub 
+// copy public key
+ vi authorized_keys
+//paste public key
+less ada
+// Copy the private kay content and paste it in a notepad
+ than save it as .ppk file
+// Convert the private key in a putty format key with puttygen tool
+
+
+
+
+
